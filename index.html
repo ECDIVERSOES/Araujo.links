@@ -6,89 +6,172 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Araujo links</title>
+    <title>Araujo Diversões - Karaokê para Festas</title>
+    <meta name="description" content="Araujo Diversões - Locações de karaokê para festas no Rio de Janeiro">
+    <meta name="keywords" content="karaokê, festas, locação, som, iluminação, eventos, música gospel">
    <style>
     body {
         margin: 0;
         padding: 0;
         height: 100vh;
-        background-image: url('background.jpg'); /* Substitua pelo seu caminho da imagem */
+        background-image: url('background.jpg');
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
         color: white;
         font-family: 'Roboto', Arial, sans-serif;
-        /* Remova ou comente as linhas abaixo para permitir a rolagem e o pull-to-refresh */
-        /* overflow: hidden; */ /* Bloqueia a rolagem */
-        /* overscroll-behavior-y: contain; */ /* Bloqueia o pull-to-refresh */
+        overflow-y: auto;
     }
 
     .header {
         display: flex;
         align-items: center;
         padding: 20px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
 
     .header img {
         width: 80px;
         height: 80px;
         margin-right: 15px;
+        border-radius: 50%;
+        border: 3px solid gold;
+        object-fit: cover;
     }
 
     .header h1 {
         margin-bottom: 5px;
+        font-size: 1.5rem;
+        color: gold;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
     .header h2 {
         margin-top: 5px;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        opacity: 0.9;
     }
 
     .content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        min-height: 50vh;
         text-align: center;
         padding: 20px;
-        padding-bottom: 80px; /* Espaço para o footer fixo */
+        padding-bottom: 100px;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .btn {
-        background: gold;
+        background: linear-gradient(135deg, gold, #ffd700);
         border: none;
-        padding: 15px 30px;
+        padding: 16px 30px;
         margin: 10px;
-        border-radius: 25px;
+        border-radius: 30px;
         text-decoration: none;
         color: #333;
         font-weight: bold;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
-        transition: transform 0.2s;
-        width: 80%;
-        max-width: 300px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        width: 90%;
+        max-width: 320px;
         display: block;
+        font-size: 1rem;
+        position: relative;
+        overflow: hidden;
     }
 
     .btn:hover {
-        transform: scale(1.05);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        color: #000;
+    }
+
+    .btn:active {
+        transform: translateY(-1px);
+    }
+
+    .btn:focus {
+        outline: 2px solid white;
+        outline-offset: 2px;
     }
 
     .footer {
         padding: 15px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.8);
         text-align: center;
         position: fixed;
         bottom: 0;
         width: 100%;
         box-sizing: border-box;
+        font-size: 0.8rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+        .header {
+            padding: 15px;
+        }
+        
+        .header img {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .header h1 {
+            font-size: 1.3rem;
+        }
+        
+        .header h2 {
+            font-size: 0.8rem;
+        }
+        
+        .btn {
+            padding: 14px 25px;
+            font-size: 0.9rem;
+            width: 95%;
+        }
+        
+        .content {
+            padding: 15px;
+            padding-bottom: 90px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .content {
+            padding-top: 40px;
+        }
+        
+        .btn {
+            width: 80%;
+        }
+    }
+
+    @media (max-height: 600px) {
+        .header {
+            padding: 10px;
+        }
+        
+        .header img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .content {
+            padding-bottom: 80px;
+        }
     }
 </style>
 </head>
 <body>
     <div class="header">
-        <img src="icone.png" alt="Logo EC Diversões"> <!-- Substitua pelo seu ícone -->
+        <img src="icone.png" alt="Logo Araujo Diversões">
         <div>
             <h1>Araujo Diversões</h1>
             <h2>Locações de karaokê para festas</h2>
@@ -96,18 +179,17 @@
     </div>
 
     <div class="content">
-        <a href="https://wa.me/5521987550672?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20aluguel" class="btn" aria-label="WhatsApp">WhatsApp</a>
-        <a href="https://www.instagram.com/gerossantos?utm_source=qr&igsh=MW84cTl1bDJrOG14dQ==" class="btn" aria-label="Instagram">Instagram</a>
-        <a href="https://www.facebook.com/share/1UEAcLTSWF/" class="btn" aria-label="Facebook">Facebook</a>
-        <a href="https://ecdiversoes.github.io/catalogo2/" class="btn" aria-label="Catálogo CTS">Catálogo CTS</a>
-        <a href="https://ecdiversoes.github.io/catalogo-raf/" class="btn" aria-label="Catálogo RAF">Catálogo RAF</a>
-        <a href="https://wa.me/c/5521987550672" class="btn" aria-label="Produtos">Produtos</a>
+        <a href="https://wa.me/5521987550672?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20aluguel" class="btn" aria-label="WhatsApp - Entre em contato pelo WhatsApp">WhatsApp</a>
+        <a href="https://www.instagram.com/gerossantos?utm_source=qr&igsh=MW84cTl1bDJrOG14dQ==" class="btn" aria-label="Instagram - Siga-nos no Instagram">Instagram</a>
+        <a href="https://www.facebook.com/share/1UEAcLTSWF/" class="btn" aria-label="Facebook - Curta nossa página no Facebook">Facebook</a>
+        <a href="https://ecdiversoes.github.io/catalogo2/" class="btn" aria-label="Catálogo CTS - Veja nosso catálogo de músicas CTS">Catálogo CTS</a>
+        <a href="https://ecdiversoes.github.io/catalogo-raf/" class="btn" aria-label="Catálogo RAF - Veja nosso catálogo de músicas RAF">Catálogo RAF</a>
+        <a href="https://ecdiversoes.github.io/GOSPEL/" class="btn" aria-label="Catálogo Gospel - Veja nosso catálogo de músicas Gospel">Catálogo Gospel</a>
+        <a href="https://wa.me/c/5521987550672" class="btn" aria-label="Produtos - Veja nossos produtos no WhatsApp">Produtos</a>
     </div>
 
     <div class="footer">
-        <p>&copy; 2025 esiocosta16@gmail.com</p>
+        <p>&copy; 2025 Araujo Diversões | esiocosta16@gmail.com</p>
     </div>
-
-    
 </body>
 </html>
